@@ -1,0 +1,163 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 21, 2017, 10:25:41 PM
+    Author     : hudhaifa
+*/
+.dataobject-grid .dataobject-item {
+  padding: 8px 8px;
+}
+.dataobject-grid .dataobject-item > div {
+  padding: 5px;
+  height: 24rem;
+  border: 1px solid #bbb;
+  overflow: hidden;
+}
+.dataobject-grid .dataobject-item > div:hover {
+  border: 1px solid #f84545;
+}
+.dataobject-grid .dataobject-item > div a:hover {
+  text-decoration: none;
+}
+.dataobject-grid .dataobject-item .title {
+  font-size: 1.1em;
+  padding: 4px 8px 0;
+  /*white-space: nowrap;*/
+}
+.dataobject-grid .dataobject-item .details {
+  color: #555;
+  font-size: 0.85em;
+  padding: 0 8px;
+  margin-bottom: 2px;
+  /* Clip long text and show dots */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dataobject-grid .dataobject-item .thumbnail {
+  overflow: hidden;
+}
+.dataobject-grid .dataobject-item .thumbnail img.zoom-img {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 250ms ease-out;
+  -moz-transition: all 250ms ease-out;
+  -ms-transition: all 250ms ease-out;
+  -o-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+}
+.dataobject-grid .dataobject-item .thumbnail img.zoom-img:hover {
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  -o-transform: scale(1.15);
+  transform: scale(1.15);
+  -webkit-transition: all 750ms ease-out;
+  -moz-transition: all 750ms ease-out;
+  -ms-transition: all 750ms ease-out;
+  -o-transition: all 750ms ease-out;
+  transition: all 750ms ease-out;
+  overflow: hidden;
+}
+.dataobject-grid .dataobject-item .thumbnail .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.dataobject-grid .dataobject-item .thumbnail .mask .info {
+  display: inline-block;
+  padding: 7px 52px;
+  background: #f84545;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 8em;
+}
+.dataobject-grid .dataobject-item:hover .thumbnail .mask {
+  opacity: 1;
+}
+.dataobject-side ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 3em;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+.dataobject-side ul li {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  /* Clip long text and show dots */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dataobject-side ul li a {
+  font-size: 14px;
+  -webkit-transition: background 350ms ease-in-out;
+  -moz-transition: background 350ms ease-in-out;
+  -ms-transition: background 350ms ease-in-out;
+  -o-transition: background 350ms ease-in-out;
+  transition: background 350ms ease-in-out;
+  -webkit-transition: border-color 350ms ease-in-out;
+  -moz-transition: border-color 350ms ease-in-out;
+  -ms-transition: border-color 350ms ease-in-out;
+  -o-transition: border-color 350ms ease-in-out;
+  transition: border-color 350ms ease-in-out;
+  -webkit-transition: color 150ms ease-in-out;
+  -moz-transition: color 150ms ease-in-out;
+  -ms-transition: color 150ms ease-in-out;
+  -o-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+  color: #999;
+}
+.dataobject-side ul li a:hover {
+  text-decoration: none;
+  color: #f84545;
+}
+.dataobject-details .details {
+  color: #555;
+  font-size: 1em;
+  margin-bottom: 2px;
+}
+.dataobject-details .thumbnail {
+  overflow: hidden;
+}
+.dataobject-related {
+  margin-bottom: 10px;
+}
+.dataobject-related .dataobject-image {
+  padding: 0;
+}
+.dataobject-related .title {
+  font-size: 13px;
+}
+.dataobject-related .details {
+  color: #555;
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+.dataobject-related .thumbnail {
+  overflow: hidden;
+}
+.dataobject-related .thumbnail .caption {
+  top: 6%;
+  padding: 6px;
+}
+.dataobject-related .thumbnail .caption h4 {
+  font-size: 9px;
+}
+/*# sourceMappingURL=dataobject.css.map */

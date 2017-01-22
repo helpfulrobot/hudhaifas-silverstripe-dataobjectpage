@@ -1,0 +1,177 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 21, 2017, 10:25:41 PM
+    Author     : hudhaifa
+*/
+@import "mixins/transform.less";
+
+@hover-color: #f84545;
+
+.dataobject-grid {
+
+    .dataobject-item {
+        padding: 8px 8px;
+
+        > div {
+            padding: 5px;
+            height: 24rem;
+            border: 1px solid #bbb;
+            overflow: hidden;
+
+            &:hover {
+                border: 1px solid @hover-color;
+            }
+
+            a {
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .title {
+            font-size: 1.1em;
+            padding: 4px 8px 0;
+            /*white-space: nowrap;*/
+        }
+
+        .details {
+            color: #555;
+            font-size: 0.85em;
+            padding: 0 8px;
+            margin-bottom: 2px;
+
+            /* Clip long text and show dots */ 
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .thumbnail {
+            overflow: hidden;
+
+            img.zoom-img {
+                .scale(1);
+                .transition(all 250ms ease-out);
+
+                &:hover {
+                    .scale(1.15);
+                    .transition(all 750ms ease-out);
+                    overflow: hidden;
+                }
+            }
+
+            .mask {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                opacity: 0;
+                .transition(all 0.4s ease-in-out);
+
+                .info {
+                    display: inline-block;
+                    padding: 7px 52px;
+                    background: @hover-color;
+                    color: #fff;
+                    text-transform: uppercase;
+                    margin-top: 8em;
+                }
+            }
+        }
+
+        &:hover {
+            .thumbnail {
+                .mask {
+                    opacity: 1;
+                }
+            }
+
+        }
+    }
+}
+
+.dataobject-side {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        margin-bottom: 3em;
+
+        max-height: 60vh;
+        overflow-y: auto;
+
+        li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+
+            /* Clip long text and show dots */ 
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            a {
+                font-size: 14px;
+                .transition(background 350ms ease-in-out); 
+                .transition(border-color 350ms ease-in-out); 
+                .transition(color 150ms ease-in-out);
+                color: #999;
+
+                &:hover {
+                    text-decoration: none;
+                    color: @hover-color;
+                }
+            }
+        }
+    }
+}
+
+.dataobject-details {
+    .details {
+        color: #555;
+        font-size: 1em;
+        margin-bottom: 2px;
+    }    
+
+    .thumbnail {
+        overflow: hidden;
+    }
+}
+
+.dataobject-related {
+    margin-bottom: 10px;
+
+    .dataobject-image {
+        padding: 0;    
+    }
+
+    .title {
+        font-size: 13px;
+    }
+
+    .details {
+        color: #555;
+        font-size: 10px;
+        margin-bottom: 2px;
+    }
+
+    .thumbnail {
+        overflow: hidden;
+
+        .caption {
+            top: 6%;
+            padding: 6px;
+
+            h4 {
+                font-size: 9px;
+            }
+        }
+    }
+
+}
