@@ -4,7 +4,7 @@
             <% include Single_Image %>
 
             <div class="mask">
-                <div class="info"><%t DataObjectPage.MORE 'More' %></div>
+                <div class="info"><%t DataObjectPage.MORE_ABOUT 'More' %></div>
             </div>
         </div>
 

@@ -2,5 +2,5 @@ en:
   DataObjectPage:
     KEYWORDS: 'Keywords'
     SEARCH_NO_RESULTS: 'Sorry, your search query did not return any results.'
-    MORE: 'More'
+    MORE_ABOUT: 'More'
     ALSO_SEE: 'Also See'
