@@ -1,3 +1,6 @@
 ar:
   DataObjectPage:
     KEYWORDS: 'الكلمات الدلالية'
+    SEARCH_NO_RESULTS: 'عذرا، لا يوجد أي نتائج للاستعلام الذي قمت به'
+    MORE: 'المزيد'
+    ALSO_SEE: 'انظر أيضا'
