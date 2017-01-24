@@ -8,8 +8,7 @@
     <% with Single %>
         <% include Single_Details %>
 
+        <% include Single_Side %>
     <% end_with %>
-
-    <% include Single_Side %>
 </div>
 

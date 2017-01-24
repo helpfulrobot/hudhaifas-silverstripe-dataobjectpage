@@ -120,6 +120,25 @@ class DataObjectPage_Controller
 //        return null;
     }
 
+    protected function getTabsList() {
+        $lists = array(
+            array(
+                'Title' => 'Header 1',
+                'Content' => 'Content 1'
+            ),
+            array(
+                'Title' => 'Header 2',
+                'Content' => 'Content 2'
+            ),
+            array(
+                'Title' => 'Header 3',
+                'Content' => 'Content 3'
+            ),
+        );
+        return new ArrayList($lists);
+//        return "Hello Tabs";
+    }
+
     protected function preRenderList() {
         
     }

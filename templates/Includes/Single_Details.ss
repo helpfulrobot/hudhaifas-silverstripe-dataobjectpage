@@ -1,7 +1,7 @@
 <div class="col-md-9">
     <div class="row dataobject-details">
         <div class="col-md-4">
-            <a href="$Link" title="$Title">
+            <a href="$ObjectLink" title="$Title">
                 <div class="thumbnail text-center">
                     <% include Single_Image %>
                 </div>
@@ -9,9 +9,11 @@
         </div>
 
         <div class="col-md-8">
-            <h4><a href="$Link" title="$Title">$Title</a></h4>
-            <p class="details">$Title</p>
-            <p class="details">$Title</p>
+            <h4><a href="$ObjectLink" title="$Title">$Title</a></h4>
+            
+            <% loop ObjectDetails %>
+                <p class="details"><% if $Title %>$Title:<% end_if %> $Value</p>
+            <% end_loop %>
         </div>
     </div>
 

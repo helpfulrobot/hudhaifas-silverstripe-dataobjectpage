@@ -149,6 +149,10 @@ and open the template in the editor.
   color: #555;
   font-size: 10px;
   margin-bottom: 2px;
+  /* Clip long text and show dots */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .dataobject-related .thumbnail {
   overflow: hidden;

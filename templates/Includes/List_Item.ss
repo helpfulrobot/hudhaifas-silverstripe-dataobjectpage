@@ -1,5 +1,5 @@
 <div>
-    <a href="$Link" title="$Title">
+    <a href="$ObjectLink" title="$Title">
         <div class="thumbnail text-center default-image">
             <% include Single_Image %>
 

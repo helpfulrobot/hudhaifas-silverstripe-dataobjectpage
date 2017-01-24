@@ -6,7 +6,7 @@
 
                 <ul>
                     <% loop Items %>
-                        <li class="cat-item"><a href="$Link" title="{$Title}">$Title</a></li>
+                        <li class="cat-item"><a href="$ObjectLink" title="{$Title}">$Title</a></li>
                     <% end_loop %>
                 </ul>
             </div>

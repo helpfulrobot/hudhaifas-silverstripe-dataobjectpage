@@ -1,9 +1,11 @@
 <div class="col-md-3">
-    <div class="row">
-        <h4 class="col-md-12"><%t DataObjectPage.ALSO_SEE 'Also See' %></h4>
+    <% if ObjectRelated %>
+        <div class="row">
+            <h4 class="col-md-12"><%t DataObjectPage.ALSO_SEE 'Also See' %></h4>
 
-        <% loop RelatedList.Limit(4) %>
-            <% include Single_Related %>
-        <% end_loop %>
-    </div>
+            <% loop ObjectRelated.Limit(4) %>
+                <% include Single_Related %>
+            <% end_loop %>
+        </div>
+    <% end_if %>
 </div>

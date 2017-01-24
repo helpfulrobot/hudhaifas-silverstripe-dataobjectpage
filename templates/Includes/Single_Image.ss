@@ -1,5 +1,5 @@
-<% if $Photo %>
-    <img src="$Photo.PaddedImage(300,300).URL" alt="image" class="img-responsive zoom-img" />
+<% if $ObjectImage %>
+    <img src="$ObjectImage.PaddedImage(300,300).URL" alt="image" class="img-responsive zoom-img" />
 <% else %>
     <img src= "dataobjectpage/images/default-image.jpg" alt="" class="img-responsive zoom-img" />
 
