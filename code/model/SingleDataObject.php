@@ -13,6 +13,8 @@
  */
 interface SingleDataObject {
 
+    public function isObjectDisabled();
+
     public function getObjectLink();
 
     public function getObjectImage();

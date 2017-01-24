@@ -105,38 +105,46 @@ class DataObjectPage_Controller
         return $this->getObjectsList()->sort('RAND()');
     }
 
+    /**
+     * 
+     * $lists = array(
+     *     array(
+     *         'Title' => 'Categories',
+     *         'Items' => $this->getObjectsList()
+     *     ),
+     *     array(
+     *         'Title' => 'Categories',
+     *         'Items' => $this->getObjectsList()->Limit(6)
+     *     )
+     * );
+     * return new ArrayList($lists);
+     * 
+     * @return type
+     */
     protected function getFiltersList() {
-        $lists = array(
-            array(
-                'Title' => 'Categories',
-                'Items' => $this->getObjectsList()
-            ),
-            array(
-                'Title' => 'Categories',
-                'Items' => $this->getObjectsList()->Limit(6)
-            )
-        );
-        return new ArrayList($lists);
-//        return null;
+        return null;
     }
 
+    /**
+     * 
+     * $lists = array(
+     *     array(
+     *         'Title' => 'Header 1',
+     *         'Content' => 'Content 1'
+     *     ),
+     *     array(
+     *         'Title' => 'Header 2',
+     *         'Content' => 'Content 2'
+     *     ),
+     *     array(
+     *         'Title' => 'Header 3',
+     *         'Content' => 'Content 3'
+     *     ),
+     * );
+     * return new ArrayList($lists);
+     */
     protected function getTabsList() {
-        $lists = array(
-            array(
-                'Title' => 'Header 1',
-                'Content' => 'Content 1'
-            ),
-            array(
-                'Title' => 'Header 2',
-                'Content' => 'Content 2'
-            ),
-            array(
-                'Title' => 'Header 3',
-                'Content' => 'Content 3'
-            ),
-        );
-        return new ArrayList($lists);
-//        return "Hello Tabs";
+        return null;
     }
 
     protected function preRenderList() {

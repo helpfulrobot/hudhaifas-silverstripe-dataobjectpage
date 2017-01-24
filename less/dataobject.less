@@ -69,17 +69,24 @@ and open the template in the editor.
                 position: absolute;
                 top: 0;
                 left: 0;
-
+                right: 15%;
+                bottom: 15%;
+                
                 opacity: 0;
                 .transition(all 0.4s ease-in-out);
 
                 .info {
-                    display: inline-block;
-                    padding: 7px 52px;
+                    /*display: inline-block;*/
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+
+                    padding: 7px;
                     background: @hover-color;
                     color: #fff;
                     text-transform: uppercase;
-                    margin-top: 8em;
+                    /*margin-top: 8em;*/
                 }
             }
         }

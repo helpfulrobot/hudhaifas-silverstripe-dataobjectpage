@@ -9,7 +9,6 @@
         <div class="tab-content">
             <% loop ObjectTabs %>
                 <div id="tab{$Pos}" class="tab-pane fade <% if First %>in active<% end_if %>">
-                    <h3>$Title</h3>
                     <p>$Content</p>
                 </div>
             <% end_loop %>
