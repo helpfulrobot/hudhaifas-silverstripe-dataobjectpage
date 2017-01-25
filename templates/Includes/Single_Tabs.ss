@@ -1,8 +1,8 @@
 <% if ObjectTabs %>
-    <div class="col-md-12">
+    <div class="col-md-12 right-tabs clearfix">
         <ul class="nav nav-tabs">
             <% loop ObjectTabs %>
-               <li class="<% if First %>active<% end_if %>"><a data-toggle="tab" href="#tab{$Pos}">$Title</a></li>
+               <li class="<% if First %>active<% end_if %>"><a href="#tab{$Pos}" data-toggle="tab">$Title</a></li>
             <% end_loop %>
         </ul>
 

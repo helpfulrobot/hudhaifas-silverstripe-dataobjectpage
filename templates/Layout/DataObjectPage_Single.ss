@@ -1,14 +1,15 @@
-<div class="row" style="margin-bottom: 1.5em;">
-    <div class="col-md-12">
-        $ObjectSearchForm
+<div class="dataobject-page">
+    <div class="row" style="margin-bottom: 1.5em;">
+        <div class="col-md-12">
+            $ObjectSearchForm
+        </div>
+    </div>
+
+    <div class="row">
+        <% with Single %>
+            <% include Single_Details %>
+
+            <% include Single_Side %>
+        <% end_with %>
     </div>
 </div>
-
-<div class="row">
-    <% with Single %>
-        <% include Single_Details %>
-
-        <% include Single_Side %>
-    <% end_with %>
-</div>
-

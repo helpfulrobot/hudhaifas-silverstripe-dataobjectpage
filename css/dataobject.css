@@ -1,46 +1,16 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
     Created on : Jan 21, 2017, 10:25:41 PM
     Author     : hudhaifa
 */
-.dataobject-grid .dataobject-item {
-  padding: 8px 8px;
-}
-.dataobject-grid .dataobject-item > div {
-  padding: 5px;
-  height: 24rem;
-  border: 1px solid #bbb;
+.dataobject-page .thumbnail {
+  position: relative;
+  /* background: #b3b3b3; */
+  margin-bottom: auto;
+  padding: 0;
+  border: 0;
   overflow: hidden;
 }
-.dataobject-grid .dataobject-item > div:hover {
-  border: 1px solid #f84545;
-}
-.dataobject-grid .dataobject-item > div a:hover {
-  text-decoration: none;
-}
-.dataobject-grid .dataobject-item .title {
-  font-size: 1.1em;
-  padding: 4px 8px 0;
-  /*white-space: nowrap;*/
-}
-.dataobject-grid .dataobject-item .details {
-  color: #555;
-  font-size: 0.85em;
-  padding: 0 8px;
-  margin-bottom: 2px;
-  /* Clip long text and show dots */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.dataobject-grid .dataobject-item .thumbnail {
-  overflow: hidden;
-}
-.dataobject-grid .dataobject-item .thumbnail img.zoom-img {
+.dataobject-page .thumbnail img.zoom-img {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -52,7 +22,7 @@ and open the template in the editor.
   -o-transition: all 250ms ease-out;
   transition: all 250ms ease-out;
 }
-.dataobject-grid .dataobject-item .thumbnail img.zoom-img:hover {
+.dataobject-page .thumbnail img.zoom-img:hover {
   -webkit-transform: scale(1.15);
   -moz-transform: scale(1.15);
   -ms-transform: scale(1.15);
@@ -65,7 +35,71 @@ and open the template in the editor.
   transition: all 750ms ease-out;
   overflow: hidden;
 }
-.dataobject-grid .dataobject-item .thumbnail .mask {
+.dataobject-page .thumbnail .caption {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  /* width: 140px; */
+  bottom: 0rem;
+  background: #000;
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.dataobject-page .right-tabs .nav {
+  float: right;
+  border-bottom: 0px;
+}
+.dataobject-page .right-tabs .nav li {
+  float: left;
+}
+.dataobject-page .right-tabs .tab-content {
+  width: 100%;
+  float: left;
+  border-top: 1px solid #ddd;
+  margin-top: -1px;
+}
+.dataobject-page .dataobject-grid .dataobject-item {
+  padding: 8px 8px;
+}
+.dataobject-page .dataobject-grid .dataobject-item:hover .thumbnail .mask {
+  opacity: 1;
+}
+.dataobject-page .dataobject-grid .dataobject-item > div {
+  padding: 5px;
+  height: 36rem;
+  border: 1px solid #bbb;
+  overflow: hidden;
+}
+.dataobject-page .dataobject-grid .dataobject-item > div:hover {
+  border: 1px solid #f84545;
+}
+.dataobject-page .dataobject-grid .dataobject-item > div a:hover {
+  text-decoration: none;
+}
+.dataobject-page .dataobject-grid .dataobject-item > div .content {
+  padding: 0;
+}
+.dataobject-page .dataobject-grid .dataobject-item .title {
+  font-size: 1.1em;
+  padding: 4px 8px 0;
+  font-weight: bold;
+  /*white-space: nowrap;*/
+}
+.dataobject-page .dataobject-grid .dataobject-item .details {
+  color: #555;
+  font-size: 0.85em;
+  padding: 0 8px;
+  margin-bottom: 2px;
+  /* Clip long text and show dots */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dataobject-page .dataobject-grid .dataobject-item .thumbnail .mask {
   position: absolute;
   top: 0;
   left: 0;
@@ -78,7 +112,7 @@ and open the template in the editor.
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-.dataobject-grid .dataobject-item .thumbnail .mask .info {
+.dataobject-page .dataobject-grid .dataobject-item .thumbnail .mask .info {
   /*display: inline-block;*/
   position: absolute;
   bottom: 0;
@@ -90,10 +124,7 @@ and open the template in the editor.
   text-transform: uppercase;
   /*margin-top: 8em;*/
 }
-.dataobject-grid .dataobject-item:hover .thumbnail .mask {
-  opacity: 1;
-}
-.dataobject-side ul {
+.dataobject-page .dataobject-side ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -101,7 +132,7 @@ and open the template in the editor.
   max-height: 60vh;
   overflow-y: auto;
 }
-.dataobject-side ul li {
+.dataobject-page .dataobject-side ul li {
   padding: 5px 0;
   border-bottom: 1px solid #eee;
   margin-bottom: 5px;
@@ -111,7 +142,7 @@ and open the template in the editor.
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.dataobject-side ul li a {
+.dataobject-page .dataobject-side ul li a {
   font-size: 14px;
   -webkit-transition: background 350ms ease-in-out;
   -moz-transition: background 350ms ease-in-out;
@@ -130,28 +161,33 @@ and open the template in the editor.
   transition: color 150ms ease-in-out;
   color: #999;
 }
-.dataobject-side ul li a:hover {
+.dataobject-page .dataobject-side ul li a:hover {
   text-decoration: none;
   color: #f84545;
 }
-.dataobject-details .details {
+.dataobject-page .dataobject-details .details {
   color: #555;
   font-size: 1em;
   margin-bottom: 2px;
 }
-.dataobject-details .thumbnail {
+.dataobject-page .dataobject-details .thumbnail {
   overflow: hidden;
 }
-.dataobject-related {
+.dataobject-page .dataobject-related {
   margin-bottom: 10px;
 }
-.dataobject-related .dataobject-image {
+.dataobject-page .dataobject-related .dataobject-image {
   padding: 0;
 }
-.dataobject-related .title {
+.dataobject-page .dataobject-related .title {
   font-size: 13px;
+  line-height: 13px;
+  margin-bottom: 5px;
+  /* Clip long text and show dots */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.dataobject-related .details {
+.dataobject-page .dataobject-related .details {
   color: #555;
   font-size: 10px;
   margin-bottom: 2px;
@@ -160,14 +196,73 @@ and open the template in the editor.
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.dataobject-related .thumbnail {
+.dataobject-page .dataobject-related .thumbnail {
   overflow: hidden;
 }
-.dataobject-related .thumbnail .caption {
+.dataobject-page .dataobject-related .thumbnail .caption {
   top: 6%;
   padding: 6px;
 }
-.dataobject-related .thumbnail .caption h4 {
+.dataobject-page .dataobject-related .thumbnail .caption h4 {
   font-size: 9px;
 }
+/* XX-Large (High defenition desktop screen) */
+/* X-Large (Desktop) */
+/* Meduim (Portrait tablet to landscape and desktop) */
+@media (min-width: 768px) and (max-width: 979px) {
+  .dataobject-page .dataobject-grid .dataobject-item {
+    padding: 8px 8px;
+  }
+  .dataobject-page .dataobject-grid .dataobject-item > div {
+    padding: 5px;
+    height: 29rem;
+  }
+}
+/* Navbar aSide */
+/* Small (Landscape phone to portrait tablet) */
+@media (max-width: 767px) {
+  .dataobject-page .thumbnail .caption h4,
+  .dataobject-page .thumbnail .caption .h4 {
+    font-size: 14px;
+  }
+  .dataobject-page .dataobject-grid .dataobject-item {
+    padding: 5px 0px;
+  }
+  .dataobject-page .dataobject-grid .dataobject-item .thumbnail .mask {
+    right: 0;
+  }
+  .dataobject-page .dataobject-grid .dataobject-item .thumbnail .mask .info {
+    padding: 2px;
+  }
+  .dataobject-page .dataobject-grid .dataobject-item > div {
+    padding: 5px;
+    height: auto;
+  }
+  .dataobject-page .dataobject-grid .dataobject-item .title {
+    font-size: 16px;
+    line-height: 17px;
+    margin-bottom: 5px;
+  }
+  .dataobject-page .dataobject-grid .dataobject-item .details {
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 3px;
+  }
+  .dataobject-page .dataobject-related .title {
+    font-size: 15px;
+    line-height: 15px;
+    margin-bottom: 5px;
+    /* Clip long text and show dots */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .dataobject-page .dataobject-related .details {
+    font-size: 11px;
+    line-height: 11px;
+    margin-bottom: 3px;
+  }
+}
+/* X-Small (Landscape phones and down) */
+/** Landscape **/
+/* Print */
 /*# sourceMappingURL=dataobject.css.map */

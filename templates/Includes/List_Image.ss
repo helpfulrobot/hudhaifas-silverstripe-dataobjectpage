@@ -1,5 +1,5 @@
 <% if $ObjectImage && not $isObjectDisabled %>
-    <img src="$ObjectImage.PaddedImage(300,300).URL" data-origin="$ObjectImage.URL">
+    <img src="$ObjectImage.PaddedImage(300,300).URL" alt="image" class="img-responsive zoom-img" />
 <% else %>
     <img src= "dataobjectpage/images/default-image.jpg" alt="" class="img-responsive zoom-img" />
 

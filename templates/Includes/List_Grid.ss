@@ -1,8 +1,8 @@
 <div class="<% if FiltersList %>col-md-8<% else %>col-md-12<% end_if %>">
     <% if Results  %>
-        <div class="dataobject-grid">
+        <div class="row dataobject-grid">
             <% loop $Results %>
-                <div class="<% if Up.FiltersList %>col-md-4<% else %>col-md-3<% end_if %> dataobject-item">
+                <div class="<% if Up.FiltersList %>col-sm-4<% else %>col-sm-3<% end_if %> dataobject-item">
                     <% include List_Item %>
                 </div>
             <% end_loop %>

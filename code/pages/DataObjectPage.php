@@ -16,9 +16,12 @@ class DataObjectPage_Controller
         parent::init();
 
         Requirements::css("dataobjectpage/css/dataobject.css");
+        Requirements::javascript("dataobjectpage/js/jquery.imgzoom.js");
     }
 
     public function index(SS_HTTPRequest $request) {
+        $start = microtime(true); // time in Microseconds
+
         if ($id = $request->param('ID')) {
             return $this->single($id);
         }
@@ -34,8 +37,11 @@ class DataObjectPage_Controller
                 )->setPageLength($this->getPageLength())
                 ->setPaginationGetVar('s');
 
+        $end = microtime(true); // time in Microseconds
+
         $data = array(
-            'Results' => $paginated
+            'Results' => $paginated,
+            'Seconds' => ($end - $start) / 1000
         );
 
         if ($request->isAjax()) {
@@ -51,7 +57,20 @@ class DataObjectPage_Controller
                     'ID' => $id
                 ))->first();
 
-
+        $align = i18n::get_script_direction(i18n::get_locale()) == 'rtl' ? 'right' : 'left';
+        
+        Requirements::customScript(<<<JS
+            $(document).ready(function () {
+                $('.imgBox').imgZoom({
+                    boxWidth: 500,
+                    boxHeight: 400,
+                    marginLeft: 5,
+                    align: '{$align}',
+                    origin: 'data-origin'
+                });
+            });
+JS
+        );
         if ($single) {
             $this->preRenderSingle();
 

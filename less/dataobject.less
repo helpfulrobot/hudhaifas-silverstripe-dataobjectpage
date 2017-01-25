@@ -1,8 +1,3 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
     Created on : Jan 21, 2017, 10:25:41 PM
     Author     : hudhaifa
@@ -11,38 +6,213 @@ and open the template in the editor.
 
 @hover-color: #f84545;
 
-.dataobject-grid {
+.dataobject-page {
 
-    .dataobject-item {
-        padding: 8px 8px;
+    .thumbnail {
+        position: relative;
+        /* background: #b3b3b3; */
+        margin-bottom: auto;
+        padding: 0;
+        border: 0;
 
-        > div {
-            padding: 5px;
-            height: 24rem;
-            border: 1px solid #bbb;
-            overflow: hidden;
+        overflow: hidden;
+
+        img.zoom-img {
+            .scale(1);
+            .transition(all 250ms ease-out);
 
             &:hover {
-                border: 1px solid @hover-color;
-            }
-
-            a {
-                &:hover {
-                    text-decoration: none;
-                }
+                .scale(1.15);
+                .transition(all 750ms ease-out);
+                overflow: hidden;
             }
         }
 
+        .caption {
+            position: absolute;
+            top: 20%;
+            left: 0;
+            width: 100%;
+            color: #fff;
+            /* width: 140px; */
+            bottom: 0rem;
+            background: #000;
+            background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+            background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+            background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+        }
+    }
+
+    .right-tabs {
+        .nav {
+            float: right;
+            border-bottom: 0px;
+
+            li {
+                float: left;
+            }
+        }
+
+        .tab-content {
+            width: 100%;
+            float: left;
+            border-top: 1px solid #ddd;
+            margin-top: -1px;
+        }
+    }
+
+    .dataobject-grid {
+
+        .dataobject-item {
+            padding: 8px 8px;
+
+            &:hover {
+                .thumbnail {
+                    .mask {
+                        opacity: 1;
+                    }
+                }
+
+            }
+
+            > div {
+                padding: 5px;
+                height: 36rem;
+                border: 1px solid #bbb;
+                overflow: hidden;
+
+                &:hover {
+                    border: 1px solid @hover-color;
+                }
+
+                a {
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+
+                .content {
+                    padding: 0;
+                }
+            }
+
+            .title {
+                font-size: 1.1em;
+                padding: 4px 8px 0;
+                font-weight: bold;
+                /*white-space: nowrap;*/
+            }
+
+            .details {
+                color: #555;
+                font-size: 0.85em;
+                padding: 0 8px;
+                margin-bottom: 2px;
+
+                /* Clip long text and show dots */ 
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .thumbnail {
+                .mask {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 15%;
+                    bottom: 15%;
+
+                    opacity: 0;
+                    .transition(all 0.4s ease-in-out);
+
+                    .info {
+                        /*display: inline-block;*/
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+
+                        padding: 7px;
+                        background: @hover-color;
+                        color: #fff;
+                        text-transform: uppercase;
+                        /*margin-top: 8em;*/
+                    }
+                }
+            }
+        }
+    }
+
+    .dataobject-side {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            margin-bottom: 3em;
+
+            max-height: 60vh;
+            overflow-y: auto;
+
+            li {
+                padding: 5px 0;
+                border-bottom: 1px solid #eee;
+                margin-bottom: 5px;
+                text-transform: uppercase;
+
+                /* Clip long text and show dots */ 
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+
+                a {
+                    font-size: 14px;
+                    .transition(background 350ms ease-in-out); 
+                    .transition(border-color 350ms ease-in-out); 
+                    .transition(color 150ms ease-in-out);
+                    color: #999;
+
+                    &:hover {
+                        text-decoration: none;
+                        color: @hover-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .dataobject-details {
+        .details {
+            color: #555;
+            font-size: 1em;
+            margin-bottom: 2px;
+        }    
+
+        .thumbnail {
+            overflow: hidden;
+        }
+    }
+
+    .dataobject-related {
+        margin-bottom: 10px;
+
+        .dataobject-image {
+            padding: 0;    
+        }
+
         .title {
-            font-size: 1.1em;
-            padding: 4px 8px 0;
-            /*white-space: nowrap;*/
+            font-size: 13px;
+            line-height: 13px;
+            margin-bottom: 5px;
+            /* Clip long text and show dots */ 
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .details {
             color: #555;
-            font-size: 0.85em;
-            padding: 0 8px;
+            font-size: 10px;
             margin-bottom: 2px;
 
             /* Clip long text and show dots */ 
@@ -54,136 +224,118 @@ and open the template in the editor.
         .thumbnail {
             overflow: hidden;
 
-            img.zoom-img {
-                .scale(1);
-                .transition(all 250ms ease-out);
+            .caption {
+                top: 6%;
+                padding: 6px;
 
-                &:hover {
-                    .scale(1.15);
-                    .transition(all 750ms ease-out);
-                    overflow: hidden;
-                }
-            }
-
-            .mask {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 15%;
-                bottom: 15%;
-                
-                opacity: 0;
-                .transition(all 0.4s ease-in-out);
-
-                .info {
-                    /*display: inline-block;*/
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-
-                    padding: 7px;
-                    background: @hover-color;
-                    color: #fff;
-                    text-transform: uppercase;
-                    /*margin-top: 8em;*/
+                h4 {
+                    font-size: 9px;
                 }
             }
         }
 
-        &:hover {
-            .thumbnail {
-                .mask {
-                    opacity: 1;
-                }
-            }
-
-        }
     }
 }
 
-.dataobject-side {
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        margin-bottom: 3em;
+/* XX-Large (High defenition desktop screen) */
+@media (min-width: 2000px) {
+}
 
-        max-height: 60vh;
-        overflow-y: auto;
+/* X-Large (Desktop) */
+@media (min-width: 1200px) and (max-width: 1999px) {
+}
 
-        li {
-            padding: 5px 0;
-            border-bottom: 1px solid #eee;
-            margin-bottom: 5px;
-            text-transform: uppercase;
+/* Meduim (Portrait tablet to landscape and desktop) */
+@media (min-width: 768px) and (max-width: 979px) {
+    .dataobject-page {
+        .dataobject-grid {
 
-            /* Clip long text and show dots */ 
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            .dataobject-item {
+                padding: 8px 8px;
 
-            a {
-                font-size: 14px;
-                .transition(background 350ms ease-in-out); 
-                .transition(border-color 350ms ease-in-out); 
-                .transition(color 150ms ease-in-out);
-                color: #999;
-
-                &:hover {
-                    text-decoration: none;
-                    color: @hover-color;
+                > div {
+                    padding: 5px;
+                    height: 29rem;
                 }
             }
         }
     }
 }
 
-.dataobject-details {
-    .details {
-        color: #555;
-        font-size: 1em;
-        margin-bottom: 2px;
-    }    
+/* Navbar aSide */
+/* Small (Landscape phone to portrait tablet) */
+@media (max-width: 767px) {
+    .dataobject-page {
+        .thumbnail {
+            .caption {
+                h4, .h4 {
+                    font-size: 14px;
+                }
+            }
+        }
 
-    .thumbnail {
-        overflow: hidden;
-    }
-}
+        .dataobject-grid {
+            .dataobject-item {
+                padding: 5px 0px;
 
-.dataobject-related {
-    margin-bottom: 10px;
+                .thumbnail {
+                    .mask {
+                        right: 0;
 
-    .dataobject-image {
-        padding: 0;    
-    }
+                        .info {
+                            padding: 2px;
+                        }
+                    }
+                }
 
-    .title {
-        font-size: 13px;
-    }
+                > div {
+                    padding: 5px;
+                    height: auto;
 
-    .details {
-        color: #555;
-        font-size: 10px;
-        margin-bottom: 2px;
+                }
 
-        /* Clip long text and show dots */ 
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
+                .title {
+                    font-size: 16px;
+                    line-height: 17px;
+                    margin-bottom: 5px;
+                }
 
-    .thumbnail {
-        overflow: hidden;
+                .details {
+                    font-size: 12px;
+                    line-height: 12px;
+                    margin-bottom: 3px;
+                }
+            }
+        }
 
-        .caption {
-            top: 6%;
-            padding: 6px;
+        .dataobject-related {
 
-            h4 {
-                font-size: 9px;
+            .title {
+                font-size: 15px;
+                line-height: 15px;
+                margin-bottom: 5px;
+                /* Clip long text and show dots */ 
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .details {
+                font-size: 11px;
+                line-height: 11px;
+                margin-bottom: 3px;
             }
         }
     }
+}
 
+/* X-Small (Landscape phones and down) */
+@media (max-width: 480px) {
+}
+
+/** Landscape **/
+@media (max-height: 480px) and (orientation: landscape) {
+}
+
+/* Print */
+@media print {
 }

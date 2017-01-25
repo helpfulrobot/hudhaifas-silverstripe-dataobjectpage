@@ -1,6 +1,7 @@
 en:
   DataObjectPage:
     KEYWORDS: 'Keywords'
-    SEARCH_NO_RESULTS: 'Sorry, your search query did not return any results.'
     MORE_ABOUT: 'More'
     ALSO_SEE: 'Also See'
+    SEARCH_NO_RESULTS: 'Sorry, your search query did not return any results.'
+    SEARCH_RESULTS_COUNT: 'About {value} results'
