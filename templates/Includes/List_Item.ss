@@ -14,7 +14,7 @@
         <div class="content col-sm-12 col-xs-8">
             <p class="title">$Title.LimitCharacters(70)</p>
             <% loop ObjectDetails %>
-            <p class="details"><% if $Title %>$Title:<% end_if %> $Value</p>
+                <p class="details">$Value</p>
             <% end_loop %>
         </div>		
     </a>
