@@ -16,6 +16,10 @@ class DataObjectPage_Controller
         parent::init();
 
         Requirements::css("dataobjectpage/css/dataobject.css");
+        if ($this->isRTL()) {
+            Requirements::css("dataobjectpage/css/dataobject-rtl.css");
+        }
+        
         Requirements::javascript("dataobjectpage/js/jquery.imgzoom.js");
     }
 
@@ -57,8 +61,8 @@ class DataObjectPage_Controller
                     'ID' => $id
                 ))->first();
 
-        $align = i18n::get_script_direction(i18n::get_locale()) == 'rtl' ? 'right' : 'left';
-        
+        $align = $this->isRTL() == 'rtl' ? 'right' : 'left';
+
         Requirements::customScript(<<<JS
             $(document).ready(function () {
                 $('.imgBox').imgZoom({
@@ -172,6 +176,10 @@ JS
 
     protected function preRenderSingle() {
         
+    }
+
+    public function isRTL() {
+        return i18n::get_script_direction(i18n::get_locale()) == 'rtl';
     }
 
 }

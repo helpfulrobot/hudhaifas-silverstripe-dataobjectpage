@@ -1,4 +1,4 @@
-/* 
+/*
     Created on : Jan 21, 2017, 10:25:41 PM
     Author     : hudhaifa
 */
@@ -30,17 +30,22 @@
 
         .caption {
             position: absolute;
+            width: 100%;
             top: 20%;
             left: 0;
-            width: 100%;
-            color: #fff;
-            /* width: 140px; */
             bottom: 0rem;
+
+            color: #fff;
             background: #000;
             background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
             background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
             background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
             background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+
+            h4, .h4 {
+                text-shadow: 0 0 3px #000;
+                font-size: 18px;
+            }
         }
     }
 
@@ -71,6 +76,13 @@
                 .thumbnail {
                     .mask {
                         opacity: 1;
+                    }
+
+                    .caption {
+                        h4, .h4 {
+                            text-shadow: 0 0 3px #f00;
+                            font-size: 18px;
+                        }
                     }
                 }
 
@@ -110,7 +122,7 @@
                 padding: 0 8px;
                 margin-bottom: 2px;
 
-                /* Clip long text and show dots */ 
+                /* Clip long text and show dots */
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
@@ -161,15 +173,15 @@
                 margin-bottom: 5px;
                 text-transform: uppercase;
 
-                /* Clip long text and show dots */ 
+                /* Clip long text and show dots */
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
 
                 a {
                     font-size: 14px;
-                    .transition(background 350ms ease-in-out); 
-                    .transition(border-color 350ms ease-in-out); 
+                    .transition(background 350ms ease-in-out);
+                    .transition(border-color 350ms ease-in-out);
                     .transition(color 150ms ease-in-out);
                     color: #999;
 
@@ -187,7 +199,7 @@
             color: #555;
             font-size: 1em;
             margin-bottom: 2px;
-        }    
+        }
 
         .thumbnail {
             overflow: hidden;
@@ -198,14 +210,14 @@
         margin-bottom: 10px;
 
         .dataobject-image {
-            padding: 0;    
+            padding: 0;
         }
 
         .title {
             font-size: 13px;
             line-height: 13px;
             margin-bottom: 5px;
-            /* Clip long text and show dots */ 
+            /* Clip long text and show dots */
             overflow: hidden;
             text-overflow: ellipsis;
         }
@@ -215,7 +227,7 @@
             font-size: 10px;
             margin-bottom: 2px;
 
-            /* Clip long text and show dots */ 
+            /* Clip long text and show dots */
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -237,14 +249,6 @@
     }
 }
 
-/* XX-Large (High defenition desktop screen) */
-@media (min-width: 2000px) {
-}
-
-/* X-Large (Desktop) */
-@media (min-width: 1200px) and (max-width: 1999px) {
-}
-
 /* Meduim (Portrait tablet to landscape and desktop) */
 @media (min-width: 768px) and (max-width: 979px) {
     .dataobject-page {
@@ -262,10 +266,13 @@
     }
 }
 
-/* Navbar aSide */
 /* Small (Landscape phone to portrait tablet) */
 @media (max-width: 767px) {
     .dataobject-page {
+        .form-group {
+            margin-bottom:0;
+        }
+
         .thumbnail {
             .caption {
                 h4, .h4 {
@@ -276,7 +283,7 @@
 
         .dataobject-grid {
             .dataobject-item {
-                padding: 5px 0px;
+                padding: 5px 15px;
 
                 .thumbnail {
                     .mask {
@@ -314,7 +321,7 @@
                 font-size: 15px;
                 line-height: 15px;
                 margin-bottom: 5px;
-                /* Clip long text and show dots */ 
+                /* Clip long text and show dots */
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
@@ -330,12 +337,55 @@
 
 /* X-Small (Landscape phones and down) */
 @media (max-width: 480px) {
-}
+    .dataobject-page {
+        .form-group {
+            margin-bottom:0;
+        }
 
-/** Landscape **/
-@media (max-height: 480px) and (orientation: landscape) {
-}
+        .thumbnail {
+            .caption {
+                top: 10%;
 
-/* Print */
-@media print {
+                h4, .h4 {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .dataobject-grid {
+            .dataobject-item {
+                padding: 5px 15px;
+
+                .title {
+                    font-size: 15px;
+                    line-height: 16px;
+                    margin-bottom: 4px;
+                }
+
+                .details {
+                    font-size: 11px;
+                    line-height: 11px;
+                    margin-bottom: 3px;
+                }
+            }
+        }
+
+        .dataobject-related {
+
+            .title {
+                font-size: 14px;
+                line-height: 14px;
+                margin-bottom: 4px;
+                /* Clip long text and show dots */
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .details {
+                font-size: 10px;
+                line-height: 10px;
+                margin-bottom: 3px;
+            }
+        }
+    }
 }

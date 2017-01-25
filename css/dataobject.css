@@ -1,4 +1,4 @@
-/* 
+/*
     Created on : Jan 21, 2017, 10:25:41 PM
     Author     : hudhaifa
 */
@@ -37,17 +37,21 @@
 }
 .dataobject-page .thumbnail .caption {
   position: absolute;
+  width: 100%;
   top: 20%;
   left: 0;
-  width: 100%;
-  color: #fff;
-  /* width: 140px; */
   bottom: 0rem;
+  color: #fff;
   background: #000;
   background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
   background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.dataobject-page .thumbnail .caption h4,
+.dataobject-page .thumbnail .caption .h4 {
+  text-shadow: 0 0 3px #000;
+  font-size: 18px;
 }
 .dataobject-page .right-tabs .nav {
   float: right;
@@ -67,6 +71,11 @@
 }
 .dataobject-page .dataobject-grid .dataobject-item:hover .thumbnail .mask {
   opacity: 1;
+}
+.dataobject-page .dataobject-grid .dataobject-item:hover .thumbnail .caption h4,
+.dataobject-page .dataobject-grid .dataobject-item:hover .thumbnail .caption .h4 {
+  text-shadow: 0 0 3px #f00;
+  font-size: 18px;
 }
 .dataobject-page .dataobject-grid .dataobject-item > div {
   padding: 5px;
@@ -206,8 +215,6 @@
 .dataobject-page .dataobject-related .thumbnail .caption h4 {
   font-size: 9px;
 }
-/* XX-Large (High defenition desktop screen) */
-/* X-Large (Desktop) */
 /* Meduim (Portrait tablet to landscape and desktop) */
 @media (min-width: 768px) and (max-width: 979px) {
   .dataobject-page .dataobject-grid .dataobject-item {
@@ -218,15 +225,17 @@
     height: 29rem;
   }
 }
-/* Navbar aSide */
 /* Small (Landscape phone to portrait tablet) */
 @media (max-width: 767px) {
+  .dataobject-page .form-group {
+    margin-bottom: 0;
+  }
   .dataobject-page .thumbnail .caption h4,
   .dataobject-page .thumbnail .caption .h4 {
     font-size: 14px;
   }
   .dataobject-page .dataobject-grid .dataobject-item {
-    padding: 5px 0px;
+    padding: 5px 15px;
   }
   .dataobject-page .dataobject-grid .dataobject-item .thumbnail .mask {
     right: 0;
@@ -263,6 +272,42 @@
   }
 }
 /* X-Small (Landscape phones and down) */
-/** Landscape **/
-/* Print */
+@media (max-width: 480px) {
+  .dataobject-page .form-group {
+    margin-bottom: 0;
+  }
+  .dataobject-page .thumbnail .caption {
+    top: 10%;
+  }
+  .dataobject-page .thumbnail .caption h4,
+  .dataobject-page .thumbnail .caption .h4 {
+    font-size: 12px;
+  }
+  .dataobject-page .dataobject-grid .dataobject-item {
+    padding: 5px 15px;
+  }
+  .dataobject-page .dataobject-grid .dataobject-item .title {
+    font-size: 15px;
+    line-height: 16px;
+    margin-bottom: 4px;
+  }
+  .dataobject-page .dataobject-grid .dataobject-item .details {
+    font-size: 11px;
+    line-height: 11px;
+    margin-bottom: 3px;
+  }
+  .dataobject-page .dataobject-related .title {
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 4px;
+    /* Clip long text and show dots */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .dataobject-page .dataobject-related .details {
+    font-size: 10px;
+    line-height: 10px;
+    margin-bottom: 3px;
+  }
+}
 /*# sourceMappingURL=dataobject.css.map */

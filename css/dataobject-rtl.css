@@ -1,0 +1,26 @@
+/* Right to Left */
+.dataobject-page .thumbnail .caption {
+  left: auto;
+  right: 0;
+}
+.dataobject-page .right-tabs .nav {
+  float: left;
+}
+.dataobject-page .right-tabs .nav li {
+  float: right;
+}
+.dataobject-page .right-tabs .tab-content {
+  float: right;
+}
+.dataobject-page .dataobject-grid .dataobject-item .thumbnail .mask {
+  left: 15%;
+  right: 0;
+}
+/* Navbar aSide */
+/* Small (Landscape phone to portrait tablet) */
+@media (max-width: 767px) {
+  .dataobject-page .dataobject-grid .dataobject-item .thumbnail .mask {
+    left: 0;
+  }
+}
+/*# sourceMappingURL=dataobject-rtl.css.map */

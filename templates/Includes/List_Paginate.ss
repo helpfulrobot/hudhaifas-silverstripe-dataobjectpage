@@ -1,5 +1,5 @@
 <% if $MoreThanOnePage %>
-    <ul class="pagination">
+    <ul class="pagination pull-right">
         <% if $NotFirstPage %>
             <li><a href="$PrevLink" class="previous"><i class="glyphicon glyphicon-chevron-left"></i></a></li>
         <% end_if %>
@@ -11,7 +11,7 @@
                 <% if $Link %>
                     <li><a href="$Link">$PageNum</a></li>
                 <% else %>
-                    <li>...</li>
+                    <li><a>...</a></li>
                 <% end_if %>
             <% end_if %>
         <% end_loop %>
