@@ -2,7 +2,13 @@
 
 class DataObjectPage
         extends Page {
-    
+
+    private static $icon = "dataobjectpage/images/wrap.png";
+
+    public function canCreate($member = false) {
+        return false;
+    }
+
 }
 
 class DataObjectPage_Controller
@@ -19,7 +25,7 @@ class DataObjectPage_Controller
         if ($this->isRTL()) {
             Requirements::css("dataobjectpage/css/dataobject-rtl.css");
         }
-        
+
         Requirements::javascript("dataobjectpage/js/jquery.imgzoom.js");
     }
 
